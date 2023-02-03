@@ -25,9 +25,17 @@ set(msg_files
   "msg/HiroSpeed.msg"
 )
 
+set(srv_files
+  "srv/MotorParams.srv"
+  "srv/MotorStatus.srv"
+  "srv/ListProjects.srv"
+  "srv/LoadProject.srv"
+)
+
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
+  ${srv_files}
   DEPENDENCIES builtin_interfaces
 )
 
